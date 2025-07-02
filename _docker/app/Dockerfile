@@ -1,11 +1,11 @@
 FROM php:8.2-fpm
 
-RUN echo 'deb http://ftp.ru.debian.org/debian/ bookworm main contrib non-free non-free-firmware \
-     deb-src http://ftp.ru.debian.org/debian/ bookworm main contrib non-free non-free-firmware \
-     deb http://ftp.ru.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware \
-     deb-src http://ftp.ru.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware \
-     deb http://ftp.ru.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware \
-     deb-src http://ftp.ru.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware' > /etc/apt/sources.list
+RUN echo 'deb http://mirror.corbina.net/debian/ bookworm main contrib non-free non-free-firmware \
+     deb-src http://mirror.corbina.net/debian/ bookworm main contrib non-free non-free-firmware \
+     deb http://mirror.corbina.net/debian-security/ bookworm-security main contrib non-free non-free-firmware \
+     deb-src http://mirror.corbina.net/debian-security/ bookworm-security main contrib non-free non-free-firmware \
+     deb http://mirror.corbina.net/debian/ bookworm-updates main contrib non-free non-free-firmware \
+     deb-src http://mirror.corbina.net/debian/ bookworm-updates main contrib non-free non-free-firmware' > /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y \
       apt-utils \
