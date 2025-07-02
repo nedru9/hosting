@@ -1,5 +1,3 @@
-version: '1.26'
-
 networks:
   default:
     driver: bridge
